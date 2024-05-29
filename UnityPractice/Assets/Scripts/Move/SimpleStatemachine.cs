@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum stateList { Idle = 0, Astate, Bstate, Ctate}
-public class SimpleStatemachine : MonoBehaviour
+public abstract class SimpleStatemachine : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public State currentState;
 
+    public void SwitchState(State newState)
+    {
+        if (currentState == newState)
+        {
+            Debug.Log("same State");
+            return;
+        }
+        currentState?.Exit();
+        currentState = newState;
+        currentState?.Enter();
+    }
     // Update is called once per frame
     void Update()
     {
-        
+        currentState.Tick(Time.deltaTime);
     }
 }

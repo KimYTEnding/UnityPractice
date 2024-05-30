@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class SimpleStatemachine : MonoBehaviour
 {
     public State currentState;
-
+    
     public void SwitchState(State newState)
     {
         if (currentState == newState)

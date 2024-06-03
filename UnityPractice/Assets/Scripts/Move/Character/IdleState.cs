@@ -22,4 +22,9 @@ public class IdleState : State
     {
         Debug.Log("Idle State Exit");
     }
+
+    public void OnMoving()
+    {
+
+    }
 }

@@ -15,7 +15,7 @@ public class IdleState : State
     public override void Enter()
     {
         Debug.Log("Idle State Enter");
-        statemachine.inputReader.onMoving += OnMoving();
+        statemachine.inputReader.onMoving += OnMoving;
     }
     public override void Tick(float deltaTime)
     {
@@ -23,11 +23,11 @@ public class IdleState : State
     public override void Exit()
     {
         Debug.Log("Idle State Exit");
-        statemachine.inputReader.onMoving -= OnMoving();
+        statemachine.inputReader.onMoving -= OnMoving;
     }
 
     public void OnMoving()
     {
-
+        Debug.Log("Moving");
     }
 }

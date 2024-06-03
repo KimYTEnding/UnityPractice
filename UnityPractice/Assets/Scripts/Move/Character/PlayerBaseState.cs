@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerBaseState : State
 {
+    protected PlayerStateMachine playerStateMachine;
+
+    public PlayerBaseState(PlayerStateMachine stateMachine)
+    {
+        playerStateMachine = stateMachine;
+    }
     public override void Enter()
     {
 

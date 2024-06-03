@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class InputReader : MonoBehaviour
+public class InputReader : Singleton<InputReader>
 {
-    protected PlayerStateMachine playerStateMachine;
     public event Action onMoving;
 
     public void OnMoving()

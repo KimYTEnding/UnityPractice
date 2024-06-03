@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStateMachine : Statemachine
 {
+    public InputReader inputReader;
     void Start()
     {
         SwitchState(new IdleState(this));

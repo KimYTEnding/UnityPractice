@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public abstract class State
 {
-    protected SimpleStatemachine stateMachine;
+    /*protected SimpleStatemachine _stateMachine;
 
-    public State(SimpleStatemachine sm)
+    public State(SimpleStatemachine statemachine)
     {
-        stateMachine = sm;
-    }
+        _stateMachine = statemachine;
+    }*/
     public abstract void Enter();
     public abstract void Tick(float deltaTime);
     public abstract void Exit();
-
-    protected void Destroy(GameObject gameObject)
+    /*public event Action asdf; 
+    public void aeee()
     {
-        Destroy(gameObject);
-    }
+        asdf?.Invoke();
+    }*/
 }

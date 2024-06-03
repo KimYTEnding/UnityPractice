@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class SimpleStatemachine : MonoBehaviour
+public abstract class Statemachine : MonoBehaviour
 {
     public State currentState;
     

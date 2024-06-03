@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class IdleState : State
 {
+    protected PlayerStateMachine statemachine;
+    
+    public IdleState(PlayerStateMachine statemachine)
+    {
+        this.statemachine = statemachine;
+    }
+
     public override void Enter()
     {
         Debug.Log("Idle State Enter");

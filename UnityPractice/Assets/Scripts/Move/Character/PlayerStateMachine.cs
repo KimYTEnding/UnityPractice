@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterMove : SimpleStatemachine
+public class PlayerStateMachine : Statemachine
 {
     /*private enum CharacterState
     {
